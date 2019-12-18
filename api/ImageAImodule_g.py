@@ -12,7 +12,7 @@ from google.cloud import vision
 from google.protobuf.json_format import MessageToDict
 from google.cloud.vision import types
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = r'D:\G_Apis\VisionApis\appPY\crescendoFactchek.json' 
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = r'#########.json' 
 
 class g_ImageFC(Resource):
     def post(self): 
