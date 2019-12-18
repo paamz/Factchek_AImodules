@@ -22,9 +22,9 @@ app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_DB'] = 'db_factcheck'
 app.config['MYSQL_CURSORCLASS'] = "DictCursor"
 
-api_key = 'AIzaSyDM9hLPKnx6yo-l8FyVthqefYA69JXMIbg'
-resource = build("customsearch",'v1', developerKey=api_key).cse()
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = r'crescendoFactchek.json' 
+api_key = '*************************'
+resource = build("your search engine name",'v1', developerKey=api_key).cse()
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = r'********.json' 
 client = vision.ImageAnnotatorClient()
 
 mysql = MySQL(app)
@@ -71,7 +71,7 @@ class VideoFC(Resource):
         #def Vcust_search(itext):#fun for custom serach  
              s_result = []
              print(labels)
-             result = resource.list(q=labels, cx='017795299087749107028:onvo85h2owu',searchType='image').execute()
+             result = resource.list(q=labels, cx='*********************',searchType='image').execute()
              print(len(result['items']))
              for item in result['items']:
                  for i in range(len(result['items'])):
