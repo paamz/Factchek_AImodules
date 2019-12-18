@@ -21,9 +21,9 @@ from flask_mysqldb import MySQL
 # =============================================================================
 mysql = MySQL(app)
 
-api_key = 'AIzaSyDM9hLPKnx6yo-l8FyVthqefYA69JXMIbg'
-resource = build("customsearch",'v1', developerKey=api_key,cache_discovery=True).cse()
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = r'crescendoFactchek.json' 
+api_key = '#################################'
+resource = build("seach_engine name",'v1', developerKey=api_key,cache_discovery=True).cse()
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = r'%%%%%%5.json' 
 
 class factchekText(Resource):
     def post(self):
@@ -53,7 +53,7 @@ class factchekText(Resource):
                      }
                      params = (
                           ('query', _query),
-                          ('key', 'AIzaSyDM9hLPKnx6yo-l8FyVthqefYA69JXMIbg'),
+                          ('key', 'your_api_key'),
                      )
                      print(params)
                      response = requests.get('https://factchecktools.googleapis.com/v1alpha1/claims:search', headers=headers, params=params)
